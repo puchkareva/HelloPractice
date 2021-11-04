@@ -51,9 +51,40 @@ namespace Exm001
              int result = numberA + numberB;
              Console.WriteLine(result);
 
-             */
 
-             
+             // Hello любимчик
+
+             Console.WriteLine("Введите Ваше имя");
+             string username = Console.ReadLine();
+
+             if (username == "Маша")
+             {
+                 Console.WriteLine("Ура, это же Маша!");
+             }
+             else
+             {
+                Console.Write("Привет, ");
+                Console.Write(username);
+             }
+
+             // Задача с гирями. Нужно найти вес самой тяжелой гири из 5ти
+
+             int a = 5;
+             int b = 7;
+             int c = 9;
+             int d = 4;
+             int e = 2;
+
+             int max = a;
+             if (b > a) max = b;
+             if (c > b) max = c;
+             if (d > c) max = d;
+             if (e > d) max = e;
+
+             Console.WriteLine(max);
+
+              */
+
 
 
 
