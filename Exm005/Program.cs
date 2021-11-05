@@ -76,9 +76,9 @@ namespace Exm005
             int numberB = CountK(arrB, 2);
             Console.WriteLine(numberB);
 
-             */
+            
 
-            // сколько элементов находится между первым и последним К
+            // нахождение первого элемента К
 
             int[] arrB = { 1, 6, -3, 2, 2, 7, 6, -9 };
             int index = 0;
@@ -94,13 +94,42 @@ namespace Exm005
                 }
                 index++;
             }
+             */
 
-            //   задача не дорешена!!!
+            // сколько элементов находится между первым и последним К
 
+            int[] arrB = { 1, 6, -3, 2, 6, 2, 7, 6, -9 };
+            int index = 0;
+            int N = arrB.Length;
+            int K = 6;
+            int first = 0;
+            int last = -0;
 
+            while (index < N)
+            {
+                if (arrB[index] == K)
+                {
+                    first = index;
+                    Console.WriteLine(first);
+                    break;
+                }
+                index++;
+            }
 
+            index = N - 1;
 
-
+            while (index >= 0)
+            {
+                if (arrB[index] == K)
+                {
+                    last = index;
+                    Console.WriteLine(last);
+                    break;
+                }
+                index--;
+            }
+            Console.Write("Количество элементов между первым и последним К: ");
+            Console.WriteLine(last - first);
 
         }
     }
