@@ -85,7 +85,7 @@ namespace Exm004
             }
             return count;
         }
-        Console.WriteLine("count = ");
+        Console.Write("count = ");
         Console.WriteLine(Check(39, 2, 5));
 
         }
