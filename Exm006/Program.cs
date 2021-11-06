@@ -47,7 +47,6 @@ namespace Exm006
             }
             Console.WriteLine();
 
-
             // 1) Отбросить элементы, которые нарушают порядок возрастания
 
             Console.WriteLine("Массив элементов, не нарушающих порядок возрастания: ");
@@ -69,6 +68,38 @@ namespace Exm006
 
             Console.WriteLine();
 
+
+            // 2) Отбросить элементы, которые больше среднего арифметического элементов A
+
+            Console.WriteLine("Массив элементов, которые меньше среднего арифметического элементов А: ");
+
+            int ArithmeticMean(int[] array)
+            {
+                int sum = 0;
+                int index = 0;
+                while (index < array.Length)
+                {
+                    sum = sum + array[index];
+                    index++;
+                }
+                sum = sum / array.Length;
+                return sum;
+            }
+
+            int mean = ArithmeticMean(arrayA);
+            Console.WriteLine(mean + " - среднее арифметическое элементов массива А");
+            index = 0;
+
+            while (index <= 9)
+            {
+                if (arrayA[index] < mean)
+                {
+                    Console.Write(arrayA[index] + " ");
+                }
+                index++;
+            }
+
+            Console.WriteLine();
 
             // 3) Отбросить чётные элементы
 
