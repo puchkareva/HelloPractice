@@ -30,6 +30,8 @@ namespace Exm006
             }
             */
 
+            Console.WriteLine("Массив А: ");
+
             int GetRandom(int minValue, int maxValue)
             {
                 return new Random().Next(minValue, maxValue);
@@ -45,11 +47,13 @@ namespace Exm006
             }
             Console.WriteLine();
 
+
             // 1) Отбросить элементы, которые нарушают порядок возрастания
 
-            int current = arrayA[0];
-            Console.WriteLine(current);
+            Console.WriteLine("Массив элементов, не нарушающих порядок возрастания: ");
 
+            int current = arrayA[0];
+            Console.Write(current + " ");
 
             index = 1;
 
@@ -57,21 +61,31 @@ namespace Exm006
             {
                 if (arrayA[index] > current)
                 {
-                    Console.WriteLine(arrayA[index] + " ");
+                    Console.Write(arrayA[index] + " ");
                     current = arrayA[index];
                 }
                 index++;
             }
 
+            Console.WriteLine();
 
 
+            // 3) Отбросить чётные элементы
 
+            Console.WriteLine("Массив без четных элементов: ");
 
+            index = 0;
 
+            while (index <= 9)
+            {
+                if ((arrayA[index] % 2) != 0)
+                {
+                    Console.Write(arrayA[index] + " ");
+                }
+                index++;
+            }
 
         }
-
-
 
     }
 }
