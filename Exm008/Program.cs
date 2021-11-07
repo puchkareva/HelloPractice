@@ -89,21 +89,75 @@ namespace Exm008
             int FindMax(int a1, int a2, int a3)
             {
                 int result = a1;
-                if (a2 > a1) result = a2;
-                if (a3 > a2) result = a3;
+                if (a2 > result) result = a2;
+                if (a3 > result) result = a3;
                 return result;
             }
 
             // FindMax(a, b, c);
-            Console.WriteLine($"Максимальное из чисел {a}, {b}, {c}, = {FindMax(a, b, c)}");
+            Console.WriteLine($"Максимальное из чисел {a}, {b}, {c} = {FindMax(a, b, c)}");
 
             // 5. Написать программу вычисления значения функции y=f(a) 
 
+            double Function(double a)
+            {
+                double result = Math.Sin(a);
+                return result;
+            }
 
-            
+            double sin = Function(10);
+            Console.WriteLine(sin);
+
             // 6. Выяснить является ли число чётным 
+
+            void EvenNumber(int num)
+            {
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine($"Число {num} является четным");
+                }
+                else
+                {
+                    Console.WriteLine($"Число {num} не является четным");
+                }
+            }
+
+            int d = RandomNum();
+            EvenNumber(d);
+
             // 7. Показать числа от -N до N
+
+            string ShowNums(int N)
+            {
+                string NumsShow = "";
+                for (int i = -N; i <= N; i++)
+                {
+                    NumsShow = NumsShow + i + " ";
+                }
+                return NumsShow;
+            }
+
+            int num = 10;
+            Console.WriteLine(ShowNums(num));
+
             // 8. Показать четные числа от 1 до N 
+
+            // int[] arrayB = new int(10);
+
+            // CreateArray(arrayB, 1, 100);
+            // PrintArray(arrayB);
+
+            // void ShowEvenNum(int array)
+            // {
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         if (array[i] % 2 == 0)
+            //         {
+            //             Console.Write($"{array[i]} ");
+            //         }
+            //     }
+            // }
+
             // 9. Показать последнюю цифру трёхзначного числа
             // 10. Показать вторую цифру трёхзначного числа
             // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
