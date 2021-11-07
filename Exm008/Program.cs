@@ -233,43 +233,40 @@ namespace Exm008
 
             // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
-            void Multiple (int num1, int num2)
+            void Multiple(int num1, int num2)
             {
-                if(num1 % num2 == 0)
+                if (num1 % num2 == 0)
                 {
                     Console.WriteLine($"Число {num1} кратно числу {num2}");
                 }
                 else
                 {
-                    double num3 = num1 % num2;
+                    int num3 = num1 % num2;
                     Console.WriteLine($"Остаток деления {num1} на {num2} = {num3}");
                 }
             }
 
-            // int m = RandomNum(1, 100);
-            // int n = RandomNum(1, 10);
-            // Multiple(m, n);
-            
-            Multiple(20, 3);
+            int m = RandomNum(1, 100);
+            int n = RandomNum(1, 10);
+            Multiple(m, n);
 
-            // 14. Найти третью цифру числа или сообщить, что её нет*/ 
 
-            int LastNumber(int N)
+            // 14. Найти третью цифру числа или сообщить, что её нет
+
+            void FindNum3(int Num3)
             {
-                if
+                if ((Num3 > 99) & (Num3 < 1000))
                 {
-
+                    Console.WriteLine($"Третья цифра числа {Num3} = {Num3 % 10}");
                 }
-                return N % 10;
+                else
+                {
+                    Console.WriteLine($"В числе {Num3} нет третьей цифры");
+                }
             }
 
-            int e = RandomNum(1, 100);
-            Console.WriteLine($"Последняя цифра числа {e} = {LastNumber(e)}");
-
-
-
-
-
+            int p = RandomNum(1, 1000);
+            FindNum3(p);
 
         }
     }
