@@ -77,14 +77,14 @@ namespace Exm008
 
             // 4. Найти максимальное из трех чисел 
 
-            int RandomNum()
+            int RandomNum(int minValue, int maxValue)
             {
-                int num = new Random().Next(1, 100);
+                int num = new Random().Next(minValue, maxValue);
                 return num;
             }
-            int a = RandomNum();
-            int b = RandomNum();
-            int c = RandomNum();
+            int a = RandomNum(1, 100);
+            int b = RandomNum(1, 100);
+            int c = RandomNum(1, 100);
 
             int FindMax(int a1, int a2, int a3)
             {
@@ -122,7 +122,7 @@ namespace Exm008
                 }
             }
 
-            int d = RandomNum();
+            int d = RandomNum(1, 20);
             EvenNumber(d);
 
             // 7. Показать числа от -N до N
@@ -137,20 +137,28 @@ namespace Exm008
                 return NumsShow;
             }
 
-            int num = 10;
+            int num = RandomNum(1, 10);
             Console.WriteLine(ShowNums(num));
 
             // 8. Показать четные числа от 1 до N 
 
-            // int[] arrayB = new int(10);
-
-            // CreateArray(arrayB, 1, 100);
-            // PrintArray(arrayB);
-
-            // void ShowEvenNum(int array)
+            // void CreateArray(int[] array, int minValue, int maxValue)
             // {
             //     for (int i = 0; i < array.Length; i++)
             //     {
+            //         array[i] = new Random().Next(minValue, maxValue);
+            //         Console.Write($"{array[i]} ");
+            //     }
+            // }
+
+            // int[] arrayA = new int[10];
+            // CreateArray(arrayA, 1, 100);
+
+            // void ShowEvenNum(int [] array, int minValue, int maxValue) //выводит только четные числа массива
+            // {
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         array[i] = new Random().Next(minValue, maxValue);
             //         if (array[i] % 2 == 0)
             //         {
             //             Console.Write($"{array[i]} ");
@@ -158,12 +166,109 @@ namespace Exm008
             //     }
             // }
 
+            // int[] arrayA = new int[10];
+            // ShowEvenNum(arrayA, 1, 100);
+
+            void EvenNumbers(int N)
+            {
+                for (int i = 2; i <= N; i += 2)
+                {
+                    Console.Write($"{i} ");
+                }
+            }
+            int N = 20;
+            EvenNumbers(N);
+
+            Console.WriteLine();
+
             // 9. Показать последнюю цифру трёхзначного числа
+
+            int LastNumber(int N)
+            {
+                return N % 10;
+            }
+
+            int e = RandomNum(100, 1000);
+            Console.WriteLine($"Последняя цифра числа {e} = {LastNumber(e)}");
+
             // 10. Показать вторую цифру трёхзначного числа
+
+            int SecondNumber(int N)
+            {
+                return N % 100 / 10;
+            }
+
+            int f = RandomNum(100, 1000);
+            Console.WriteLine($"Вторая цифра числа {f} = {SecondNumber(f)}");
+
             // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+
+            int MaxNum(int Num)
+            {
+                if (Num / 10 > Num % 10)
+                {
+                    return Num / 10;
+                }
+                else
+                {
+                    return Num % 10;
+                }
+            }
+
+            int g = RandomNum(10, 99);
+            Console.WriteLine($"Наибольшая цифра числа {g} = {MaxNum(g)}");
+
             // 12. Удалить вторую цифру трёхзначного числа
+
+            void DelSecondNum(int num)
+            {
+                int first = (num / 100);
+                int last = (num % 10);
+                //int new = first * 10 + last;
+                Console.WriteLine($"Число {num} без второй цифры = {first}{last}");
+            }
+
+            int k = RandomNum(100, 1000);
+            DelSecondNum(k);
+
             // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+
+            void Multiple (int num1, int num2)
+            {
+                if(num1 % num2 == 0)
+                {
+                    Console.WriteLine($"Число {num1} кратно числу {num2}");
+                }
+                else
+                {
+                    double num3 = num1 % num2;
+                    Console.WriteLine($"Остаток деления {num1} на {num2} = {num3}");
+                }
+            }
+
+            // int m = RandomNum(1, 100);
+            // int n = RandomNum(1, 10);
+            // Multiple(m, n);
+            
+            Multiple(20, 3);
+
             // 14. Найти третью цифру числа или сообщить, что её нет*/ 
+
+            int LastNumber(int N)
+            {
+                if
+                {
+
+                }
+                return N % 10;
+            }
+
+            int e = RandomNum(1, 100);
+            Console.WriteLine($"Последняя цифра числа {e} = {LastNumber(e)}");
+
+
+
+
 
 
         }
