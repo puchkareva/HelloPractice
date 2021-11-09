@@ -20,16 +20,22 @@ namespace Exm008
 
             // 1. По двум заданным числам проверять является ли первое квадратом второго 
 
-            string CheckSquare(int arg1, int arg2)
+            //  АЛЬТЕРНАТИВА
+            // string CheckSquare(int arg1, int arg2)
+            // {
+            //     if (arg1 == arg2 * arg2)
+            //     {
+            //         return "true";
+            //     }
+            //     else
+            //     {
+            //         return "false";
+            //     }
+            // }
+
+            bool CheckSquare(int arg1, int arg2)
             {
-                if (arg1 == arg2 * arg2)
-                {
-                    return "true";
-                }
-                else
-                {
-                    return "false";
-                }
+                return arg1 == arg2 * arg2;
             }
 
             int numA = new Random().Next(1, 100);
@@ -57,23 +63,26 @@ namespace Exm008
 
             MoreLess(numA, numB);
 
+
             // 3. По заданному номеру дня недели вывести его название
 
-            // void DayOfWeek(int dayN)
-            // {
-            //     string[] array = { "Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресенье" };
-            //     Console.WriteLine(array[dayN - 1]);
-            // }
-
-            // DayOfWeek(3);
-
-            string DayOfWeek(int dayN)
+            void DayOfWeek(int dayN)
             {
                 string[] array = { "Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресенье" };
-                return array[dayN - 1];
+                Console.WriteLine(array[dayN - 1]);
             }
+
             int daynum = new Random().Next(1, 8);
-            Console.WriteLine($"{daynum} день недели - это {DayOfWeek(daynum)}");
+            DayOfWeek(daynum);
+
+            //  АЛЬТЕРНАТИВА
+            // string DayOfWeek(int dayN)
+            // {
+            //     string[] array = { "Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресенье" };
+            //     return array[dayN - 1];
+            // }
+            // int daynum = new Random().Next(1, 8);
+            // Console.WriteLine($"{daynum} день недели - это {DayOfWeek(daynum)}");
 
             // 4. Найти максимальное из трех чисел 
 
@@ -97,7 +106,7 @@ namespace Exm008
             // FindMax(a, b, c);
             Console.WriteLine($"Максимальное из чисел {a}, {b}, {c} = {FindMax(a, b, c)}");
 
-            // 5. Написать программу вычисления значения функции y=f(a) 
+            // 5. Написать программу вычисления значения функции y=f(a) // синус
 
             double Function(double a)
             {
@@ -110,20 +119,30 @@ namespace Exm008
 
             // 6. Выяснить является ли число чётным 
 
-            void EvenNumber(int num)
+            //  АЛЬТЕРНАТИВА
+            // void EvenNumber(int num)
+            // {
+            //     if (num % 2 == 0)
+            //     {
+            //         Console.WriteLine($"Число {num} является четным");
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine($"Число {num} не является четным");
+            //     }
+            // }
+
+            // int d = RandomNum(1, 20);
+            // EvenNumber(d);
+
+            bool EvenNumber(int num)
             {
-                if (num % 2 == 0)
-                {
-                    Console.WriteLine($"Число {num} является четным");
-                }
-                else
-                {
-                    Console.WriteLine($"Число {num} не является четным");
-                }
+                return num % 2 == 0;
             }
 
             int d = RandomNum(1, 20);
-            EvenNumber(d);
+            Console.WriteLine($"Является ли число {d} четным - {EvenNumber(d)}");
+            // Console.WriteLine(EvenNumber(d));
 
             // 7. Показать числа от -N до N
 
@@ -140,8 +159,23 @@ namespace Exm008
             int num = RandomNum(1, 10);
             Console.WriteLine(ShowNums(num));
 
+            //  АЛЬТЕРНАТИВА
+            // void ShowMinMax(int Nmin)
+            // {
+            //     int length = Nmin * -2 + 1;
+            //     int[] array = new int[length];
+            //     for (int i = 0; i < length; i++)
+            //     {
+            //         array[i] = Nmin + i;
+            //         Console.Write(array[i]);
+            //     }
+            // }
+
+            // ShowMinMax(-5);
+
             // 8. Показать четные числа от 1 до N 
 
+            //  АЛЬТЕРНАТИВА
             // void CreateArray(int[] array, int minValue, int maxValue)
             // {
             //     for (int i = 0; i < array.Length; i++)
@@ -233,23 +267,32 @@ namespace Exm008
 
             // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
-            void Multiple(int num1, int num2)
+            // void Multiple(int num1, int num2)
+            // {
+            //     if (num1 % num2 == 0)
+            //     {
+            //         Console.WriteLine($"Число {num1} кратно числу {num2}");
+            //     }
+            //     else
+            //     {
+            //         int num3 = num1 % num2;
+            //         Console.WriteLine($"Остаток деления {num1} на {num2} = {num3}");
+            //     }
+            // }
+
+            // int m = RandomNum(1, 100);
+            // int n = RandomNum(1, 10);
+            // Multiple(m, n);
+
+            int Multiple(int num1, int num2) //  если кратно выводит 0, если нет, то остаток деления
             {
-                if (num1 % num2 == 0)
-                {
-                    Console.WriteLine($"Число {num1} кратно числу {num2}");
-                }
-                else
-                {
-                    int num3 = num1 % num2;
-                    Console.WriteLine($"Остаток деления {num1} на {num2} = {num3}");
-                }
+                if (num1 % num2 == 0) return 0;
+                else return num1 % num2;
             }
 
             int m = RandomNum(1, 100);
             int n = RandomNum(1, 10);
-            Multiple(m, n);
-
+            Console.WriteLine(Multiple(m,n));
 
             // 14. Найти третью цифру числа или сообщить, что её нет
 
