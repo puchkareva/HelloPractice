@@ -8,13 +8,65 @@ namespace Exm009
         {
 
             // Почувствуй себя джуном
+
+            int RandomNum(int minValue, int maxValue)
+            {
+                int num = new Random().Next(minValue, maxValue);
+                return num;
+            }
+
             // 15. Дано число. Проверить кратно ли оно 7 и 23
+
+            // bool Multiple(int num1)
+            // {
+            //     return (num1 % 7 == 0) & (num1 % 23 == 0);
+            // }
+            // int a = RandomNum(1, 1000);
+            // Console.WriteLine(Multiple(a));
+
+
             // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+
+            // bool Weekend(int W)
+            // {
+            //     return W == 6 | W == 7;
+            // }
+            // int b = RandomNum(1, 8);
+            // Console.WriteLine(Weekend(b));
+
+
             // 17. По двум заданным числам проверять является ли одно квадратом другого
+
+            // bool CheckSquare2(int arg1, int arg2)
+            // {
+            //     return (arg1 == arg2 * arg2) & (arg2 == arg1 * arg1);
+            // }
+            // Console.WriteLine(CheckSquare2(1, 1));
+
+
             // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+
+            // bool CheckTruth(bool x, bool y)
+            // {
+            //     return (!(x | y) == !x & !y);
+            // }
+            // Console.WriteLine(CheckTruth(true, false));
+
+
             // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+            
+            
             // 20. Ввести номер четверти, показать диапазоны для возможных координат
             // 21. Программа проверяет пятизначное число на палиндромом.
+
+            // bool CheckPalindrome(int P)
+            // {
+            //     return ((P / 10000) % 10 == P % 10 & (P / 1000) % 10 == (P /10) % 10);
+            // }
+            // int f = RandomNum(10000, 100000); // int f = 75457; - для проверки числа
+            // Console.WriteLine(CheckPalindrome(f));
+
+
             // 22. Найти расстояние между точками в пространстве 2D/3D
 
             // Почувствуй себя мидлом
