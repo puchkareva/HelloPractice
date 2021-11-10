@@ -13,8 +13,8 @@ namespace Exm010
                 string ab = Convert.ToString(num);
                 char a = ab[0];
                 char b = ab[1];
-                if (a > b) {return a;}
-                else {return b;}
+                if (a > b) return a;
+                else return b;
             }
             int G = new Random().Next(10,100);
             char result = GetMaxNumber(G);
