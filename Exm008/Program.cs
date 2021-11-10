@@ -254,16 +254,29 @@ namespace Exm008
 
             // 12. Удалить вторую цифру трёхзначного числа
 
-            void DelSecondNum(int num)
+            // АЛЬТЕРНАТИВА
+            // void DelSecondNum(int num)
+            // {
+            //     int first = (num / 100);
+            //     int last = (num % 10);
+            //     //int new = first * 10 + last;
+            //     Console.WriteLine($"Число {num} без второй цифры = {first}{last}");
+            // }
+
+            // int k = RandomNum(100, 1000);
+            // DelSecondNum(k);
+
+             int DelSecondNum(int num)
             {
-                int first = (num / 100);
-                int last = (num % 10);
-                //int new = first * 10 + last;
-                Console.WriteLine($"Число {num} без второй цифры = {first}{last}");
+                int first = num / 100;
+                int last = num % 10;
+                return first * 10 + last;
             }
 
             int k = RandomNum(100, 1000);
-            DelSecondNum(k);
+            Console.WriteLine(k);
+            Console.WriteLine(DelSecondNum(k));
+
 
             // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
@@ -292,24 +305,36 @@ namespace Exm008
 
             int m = RandomNum(1, 100);
             int n = RandomNum(1, 10);
-            Console.WriteLine(Multiple(m,n));
+            Console.WriteLine(Multiple(m, n));
 
             // 14. Найти третью цифру числа или сообщить, что её нет
 
-            void FindNum3(int Num3)
+            //  АЛЬТЕРНАТИВА
+            // void FindNum3(int Num3) // третье цифра - единицы
+            // {
+            //     if ((Num3 > 99) & (Num3 < 1000))
+            //     {
+            //         Console.WriteLine($"Третья цифра числа {Num3} = {Num3 % 10}");
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine($"В числе {Num3} нет третьей цифры");
+            //     }
+            // }
+
+            // int p = RandomNum(1, 1000);
+            // FindNum3(p);
+
+            int FindNum3(int num3) // третья цифра - сотни
             {
-                if ((Num3 > 99) & (Num3 < 1000))
-                {
-                    Console.WriteLine($"Третья цифра числа {Num3} = {Num3 % 10}");
-                }
-                else
-                {
-                    Console.WriteLine($"В числе {Num3} нет третьей цифры");
-                }
+                if ((num3 > 99) & (num3 < 1000)) return num3 / 100 % 10;
+                else return -1; // третьей цифры нет
             }
 
             int p = RandomNum(1, 1000);
-            FindNum3(p);
+            Console.WriteLine(p);
+            Console.Write(FindNum3(p));
+
 
         }
     }
