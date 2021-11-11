@@ -9,13 +9,13 @@ namespace Exm009
 
             // Почувствуй себя джуном
 
-            int RandomNum(int minValue, int maxValue)
-            {
-                int num = new Random().Next(minValue, maxValue);
-                return num;
-            }
+            // int RandomNum(int minValue, int maxValue)
+            // {
+            //     int num = new Random().Next(minValue, maxValue);
+            //     return num;
+            // }
 
-            // 15. Дано число. Проверить кратно ли оно 7 и 23
+            // ============ 15. Дано число. Проверить кратно ли оно 7 и 23 ============
 
             // bool Multiple(int num1)
             // {
@@ -25,7 +25,7 @@ namespace Exm009
             // Console.WriteLine(Multiple(a));
 
 
-            // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+            // =========== 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём ======
 
             // bool Weekend(int W)
             // {
@@ -35,7 +35,7 @@ namespace Exm009
             // Console.WriteLine(Weekend(b));
 
 
-            // 17. По двум заданным числам проверять является ли одно квадратом другого
+            // ========== 17. По двум заданным числам проверять является ли одно квадратом другого ============
 
             // bool CheckSquare2(int arg1, int arg2)
             // {
@@ -44,21 +44,68 @@ namespace Exm009
             // Console.WriteLine(CheckSquare2(1, 1));
 
 
-            // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+            // ========== 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y =========
 
+            // Решение 1
             // bool CheckTruth(bool x, bool y)
             // {
             //     return (!(x || y) == (!x && !y));
             // }
             // Console.WriteLine(CheckTruth(true, false));
-
             // Console.WriteLine(CheckTruth(true, true));
             // Console.WriteLine(CheckTruth(false, true));
             // Console.WriteLine(CheckTruth(false, false));
 
+            // Решение от SK
+            // bool f(bool arg1, bool arg2)
+            // {
+            //     return (!(arg1 || arg2) == (!arg1 && !arg2));
+            // }
+            // bool
+            // x = false, y = false;
+            // bool res = f(x, y);
 
-            // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, 
-            // причем X ≠ 0 и Y ≠ 0
+            // x = false; y = true;
+            // res = res && f(x, y);
+            // x = true; y = false;
+            // res = res && f(x, y);
+            // x = true; y = true;
+            // res = res && f(x, y);
+            // Console.WriteLine(res);
+
+            // bool ConvertIntToBool(int arg)
+            // {
+            //     return arg == 1;
+            // }
+            // // Console.WriteLine(ConvertIntToBool(0));
+            // // Console.WriteLine(ConvertIntToBool(1));
+
+            // bool res = true;
+            // for (int i = 0; i <= 1; i++)
+            // {
+            //     for (int j = 0; j <= 1; j++)
+            //     {
+            //         res = res && f(ConvertIntToBool(i), ConvertIntToBool(j));
+            //     }
+            // }
+            // Console.WriteLine(res);
+
+            // bool Table()
+            // {
+            //     bool res = true;
+            //     for (int i = 0; i <= 1; i++)
+            //     {
+            //         for (int j = 0; j <= 1; j++)
+            //         {
+            //             res = res && f(Convert.ToBooLean(i), ConvertIntToBool(j));
+            //         }
+            //     }
+            // }
+            // // Console.WriteLine(Table());
+
+
+            // ========== 19. Определить номер четверти плоскости, в которой находится точка ===========
+            // ==========     с координатами Х и У, причем X ≠ 0 и Y ≠ 0                     ============
 
             // int FindQuarter (int x, int y)
             // {
@@ -70,7 +117,7 @@ namespace Exm009
             //  Console.WriteLine(FindQuarter(-2,5));
 
 
-            // 20. Ввести номер четверти, показать диапазоны для возможных координат
+            // ======== 20. Ввести номер четверти, показать диапазоны для возможных координат =============
 
             //  void ShowQuarter (int q)
             // {
@@ -82,7 +129,8 @@ namespace Exm009
             // int a = RandomNum(1, 5);
             //  ShowQuarter(a);
 
-            // 21. Программа проверяет пятизначное число на палиндромом.
+
+            // ========== 21. Программа проверяет пятизначное число на палиндромом =============
 
             // bool CheckPalindrome(int P)
             // {
@@ -92,7 +140,7 @@ namespace Exm009
             // Console.WriteLine(CheckPalindrome(f));
 
 
-            // 22. Найти расстояние между точками в пространстве 2D/3D
+            // ========= 22. Найти расстояние между точками в пространстве 2D/3D =============
 
             // double FindDistance2D(int x1, int x2, int y1, int y2) // AB = √(xb - xa)2 + (yb - ya)2
             // {
