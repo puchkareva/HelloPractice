@@ -48,10 +48,10 @@ namespace Exm009
 
             // bool CheckTruth(bool x, bool y)
             // {
-            //     return (!(x | y) == !x & !y);
+            //     return (!(x || y) == (!x && !y));
             // }
             // Console.WriteLine(CheckTruth(true, false));
-            
+
             // Console.WriteLine(CheckTruth(true, true));
             // Console.WriteLine(CheckTruth(false, true));
             // Console.WriteLine(CheckTruth(false, false));
