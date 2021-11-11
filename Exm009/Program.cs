@@ -51,6 +51,10 @@ namespace Exm009
             //     return (!(x | y) == !x & !y);
             // }
             // Console.WriteLine(CheckTruth(true, false));
+            
+            // Console.WriteLine(CheckTruth(true, true));
+            // Console.WriteLine(CheckTruth(false, true));
+            // Console.WriteLine(CheckTruth(false, false));
 
 
             // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, 
@@ -97,12 +101,12 @@ namespace Exm009
             // Console.WriteLine(FindDistance2D(2, 8, -2, 7));
 
 
-            double FindDistance3D(int x1, int x2, int y1, int y2, int z1, int z2) 
-            // AB = √(xb - xa)2 + (yb - ya)2 + (zb - za)2
-            {
-                return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)+ Math.Pow((z2 - z1), 2));
-            }
-            Console.WriteLine(FindDistance3D(2, 8, -2, 7, 4, 10));
+            // double FindDistance3D(int x1, int x2, int y1, int y2, int z1, int z2) 
+            // // AB = √(xb - xa)2 + (yb - ya)2 + (zb - za)2
+            // {
+            //     return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)+ Math.Pow((z2 - z1), 2));
+            // }
+            // Console.WriteLine(FindDistance3D(2, 8, -2, 7, 4, 10));
 
         }
     }
