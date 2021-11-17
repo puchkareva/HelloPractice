@@ -182,28 +182,105 @@ namespace Exm013
             // Console.WriteLine(PrintArray(K));
             // Console.WriteLine(FindSumOdd(K));
 
+
             // ======== 39. Найти произведение пар чисел в одномерном массиве. ====================
             // ============ Парой считаем первый и последний элемент, второй и предпоследний и т.д. =========
 
-            
-            
+            // string FindProductPairs (int[] array)
+            // {
+            //     string res = String.Empty; 
+            //     int result = 0;
+            //     int last = array.Length-1;
+            //     for (int i = 0; i < array.Length/2; i++, last--)
+            //     {
+            //         result = array[i] * array[last];
+            //         res += $"{result} ";
+            //     }
+            //     return res;
+            // }
+
+            // int[] L = CreateArray(10);
+            // FillArray(L, 0, 10);
+            // Console.WriteLine(PrintArray(L));
+            // Console.WriteLine(FindProductPairs(L));
 
 
             // ======= 40. В Указанном массиве вещественных чисел найдите разницу  =============
             // =========== между максимальным и минимальным элементом ================== 
 
+            // double[] CreateDoubleArray()
+            // {
+            //     double[] array = new double[10];
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         array[i] = new Random().NextDouble();
+            //     }
+            //     return array;
+            // }
+
+            // string PrintDoubleArray(double[] array)
+            // {
+            //     string res = String.Empty;
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         res += $"{array[i]} ";
+            //     }
+            //     return res;
+            // }
+
+            // double FindMax(double[] array)
+            // {
+            //     double max = 0.0;
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         if (array[i] > max) max = array[i];
+            //     }
+            //     return max;
+            // }
+
+            // double FindMin(double[] array)
+            // {
+            //     double min = 1.0;
+            //     for (int i = 0; i < array.Length; i++)
+            //     {
+            //         if (array[i] < min) min = array[i];
+            //     }
+            //     return min;
+            // }
+
+            // double FindDiff(double max, double min)
+            // {
+            //     return max - min;
+            // }
+
+            // double[] M = CreateDoubleArray();
+            // Console.WriteLine(PrintDoubleArray(M));
+            // Console.WriteLine(FindMax(M));
+            // Console.WriteLine(FindMin(M));
+            // Console.WriteLine(FindDiff(FindMax(M), FindMin(M)));
 
 
+            // ============= Почувствуй себя лидом ==================
+            // ========== 41. Выяснить являются ли три числа сторонами треугольника ==============
+
+            // bool Triangle(int a, int b, int c)
+            // {
+            //     return (a < b + c) && (b < a + c) && (c < a + b);
+            // }
+
+            // Console.WriteLine(Triangle(6, 2, 7));
 
 
-            // Почувствуй себя лидом
-            // 41. Выяснить являются ли три числа сторонами треугольника 
-            // 42. Определить сколько чисел больше 0 введено с клавиатуры
+            // ======== 42. Определить сколько чисел больше 0 введено с клавиатуры ==============
+
             // 43. Написать программу преобразования десятичного числа в двоичное
             // 44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
             // 45. Показать числа Фибоначчи
             // 46. Написать программу масштабирования фигуры
             // 47. Написать программу копирования массива
+
+
+           
 
         }
     }
