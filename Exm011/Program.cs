@@ -67,16 +67,27 @@ namespace Exm011
 
             // ============ 25. Найти сумму чисел от 1 до А ===============
 
-            // int SumOfNumbers(int a)
+            // long SumOfNumbers(long a)
             // {
-            //     int sum = 0;
+            //     long sum = 0;
             //     for (int i = 1; i <= a; i++)
             //     {
             //         sum = sum + i;
             //     }
             //     return sum;
             // }
-            // Console.WriteLine(SumOfNumbers(10));
+            // DateTime DT = DateTime.Now
+            // Console.WriteLine(SumOfNumbers(1_000_000_000));
+            // System.Console.WriteLine((DateTime.Now - DT).TotalMilliseconds);
+
+            // решение с помощью арифметической прогрессии
+            // long SumOfNumbers(long a)
+            // {
+            //     return (a * (a + 1) / 2);
+            // }
+            // DateTime DT = DateTime.Now;
+            // Console.WriteLine(SumOfNumbers(1_000_000_000));
+            // System.Console.WriteLine((DateTime.Now - DT).TotalMilliseconds);
 
 
             // ========== 26. Возведите число А в натуральную степень B используя цикл ========
@@ -165,8 +176,6 @@ namespace Exm011
             // }
             // double[] Cube = PowEven3(10);
             // for (int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
-
-
         }
     }
 }
